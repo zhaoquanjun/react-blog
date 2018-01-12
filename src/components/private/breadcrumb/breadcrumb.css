@@ -1,0 +1,31 @@
+.nav-path {
+  margin: 20px auto;
+  height: 38px;
+  padding: 0 25px;
+  font-size: 14px;
+  box-shadow: 0 0 8px #444;
+}
+
+.b-breadcrumb {
+  width: 100%;
+  height: 100%;
+  line-height: 38px;
+}
+
+@media (min-width: 768px) {
+  .nav-path {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-path {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-path {
+    width: 1100px;
+  }
+}

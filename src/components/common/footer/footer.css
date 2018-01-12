@@ -1,0 +1,18 @@
+.b-footer {
+  width: 100%;
+  margin-top: 26px;
+  padding: 12px 32px;
+  border-top: 1px solid #ddd;
+}
+
+.b-footer-name {
+  text-align: center;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #0e77ca;
+}
+
+.b-rights {
+  text-align: center;
+  color: #888;
+}
