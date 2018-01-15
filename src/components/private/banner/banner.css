@@ -1,0 +1,7 @@
+.slick-active {
+  background: red;
+  z-index: 999999999999;
+}
+.slick-dots li {
+  background: green;
+}

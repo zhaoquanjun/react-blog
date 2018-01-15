@@ -3,17 +3,22 @@ import {
   BrowserRouter,
   Route,
   Switch,
-  IndexRoute,
-  Provider
+  Provider,
+  Redirect
 } from "react-router-dom";
 
-import App from "./App";
+import { Home, Article, TimeLine, Tips, Essay } from "./views";
 
 const Routes = () => (
   <BrowserRouter>
-    <Route path="/" component={App}>
-      <IndexRoute path="/home" component={App} />
-    </Route>
+    <Switch>
+      <Route path="/home" component={Home} />
+      <Redirect exact from="/" to="/home" />
+      <Route path="/article" component={Article} />
+      <Route path="/timeLine" component={TimeLine} />
+      <Route path="/tips" component={Tips} />
+      <Route path="/essay" component={Essay} />
+    </Switch>
   </BrowserRouter>
 );
 

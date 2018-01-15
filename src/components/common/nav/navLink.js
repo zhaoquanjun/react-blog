@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+// import PropTypes from "prop-types";
 import { Menu, Icon } from "antd";
+import { Link } from "react-router-dom";
 import "./navLink.css";
 
 const MenuItem = Menu.Item;
@@ -14,16 +16,17 @@ const Lists = [
 
 const content = Lists.map(item => (
   <MenuItem key={item.key}>
+    {/* <Link to="/"> */}
     <Icon type={item.type} />
     {item.text}
+    {/* </Link> */}
   </MenuItem>
 ));
 
-console.dir(Menu);
-
-class NavLink extends Component {
-  constructor(props) {
-    super(props);
+class NavTo extends Component {
+  constructor(props, context) {
+    super(props, context);
+    // this.context.router;
     this.state = {
       currentPath: "home"
     };
@@ -34,6 +37,7 @@ class NavLink extends Component {
     this.setState({
       currentPath: e.key
     });
+    // this.context.router.push("/" + e.key);
   }
 
   render() {
@@ -51,4 +55,8 @@ class NavLink extends Component {
   }
 }
 
-export default NavLink;
+// NavTo.propTypes = {
+//   router: PropTypes.func.isRequired
+// };
+
+export default NavTo;

@@ -1,7 +1,8 @@
 import "babel-polyfill";
 import React, { Component } from "react";
-import Route from "./route";
 import "./App.css";
+
+import Route from "./route";
 
 import Header from "./components/common/header/header";
 import Footer from "./components/common/footer/footer";
@@ -12,8 +13,15 @@ class App extends Component {
     return (
       <div className="b-page">
         <Header />
-        <Breadcrumb />
-        <Footer />
+        <div className="breadcrumbContainer">
+          <Breadcrumb />
+        </div>
+        <div className="contentContainer">
+          <Route />
+        </div>
+        <div className="footerContainer">
+          <Footer />
+        </div>
       </div>
     );
   }

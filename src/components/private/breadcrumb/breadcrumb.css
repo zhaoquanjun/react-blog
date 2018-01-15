@@ -12,20 +12,6 @@
   line-height: 38px;
 }
 
-@media (min-width: 768px) {
-  .nav-path {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .nav-path {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .nav-path {
-    width: 1100px;
-  }
+.nav-path {
+  width: 100%;
 }

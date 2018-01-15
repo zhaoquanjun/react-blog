@@ -8,7 +8,7 @@ class Footer extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(e) {
     message.info("你想去哪里呀~");
   }
 
