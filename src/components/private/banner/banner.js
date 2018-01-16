@@ -6,8 +6,9 @@ import { Carousel } from "antd";
 const pitLists = [
   { img: require("../../../assets/1.jpg"), key: "banner_01" },
   { img: require("../../../assets/2.jpg"), key: "banner_02" },
-  { img: require("../../../assets/3.jpg"), key: "banner_03" },
-  { img: require("../../../assets/4.jpg"), key: "banner_04" }
+  { img: require("../../../assets/3.png"), key: "banner_03" },
+  { img: require("../../../assets/4.jpg"), key: "banner_04" },
+  { img: require("../../../assets/5.jpg"), key: "banner_05" }
 ];
 
 const bannerContent = pitLists.map(item => (

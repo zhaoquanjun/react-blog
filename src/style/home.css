@@ -1,11 +1,16 @@
 .home-header {
   width: 100%;
+  height: 350px;
+}
+
+.home-header::after {
+  clear: both;
 }
 
 .home-banner {
   float: left;
   width: 59%;
-  height: 350px;
+  height: 100%;
   overflow: hidden;
   box-shadow: 0 0 8px #444;
 }
@@ -15,7 +20,7 @@
   float: left;
   margin-left: 2%;
   width: 39%;
-  height: 350px;
+  height: 100%;
   overflow: hidden;
   background: url("../assets/bord.jpg") no-repeat center center;
   background-size: 100% 100%;
@@ -41,4 +46,46 @@
   font-weight: 500;
   text-align: left;
   text-indent: 40px;
+}
+
+.home-content{
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .home-banner {
+    width: 730px;
+  }
+  .home-day-words{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-banner {
+    width: 100%;
+  }
+  .home-day-words{
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-banner {
+    width: 100%;
+  }
+  .home-day-words{
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-banner {
+    width: 59%;
+  }
+  .home-day-words{
+    display: block;
+    width: 39%;
+  }
 }

@@ -1,16 +1,23 @@
 import React, { Component } from "react";
 import "../style/home.css";
 
-import { Row, Col } from "antd";
+import { Row, Col, } from "antd";
 
 import Banner from "../components/private/banner/banner";
+import HomeArticle from "../components/private/homeArticle/home-article";
+import Card from '../components/private/card/card'
+
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
+
 
   render() {
+
+    
+
     return (
       <div className="homePage">
         <div className="home-header">
@@ -25,9 +32,15 @@ class Home extends Component {
             </p>
           </div>
         </div>
-        <ul className="articleLists">
-          <li className="listItem">111</li>
-        </ul>
+        <Row gutter={16} className='home-content'>
+          <Col className="content-left gutter-row" span={18}>
+            <HomeArticle />
+          </Col>
+          <Col className='content-right gutter-row' span={6}>
+            <Card />
+          </Col>
+        </Row>
+        
       </div>
     );
   }

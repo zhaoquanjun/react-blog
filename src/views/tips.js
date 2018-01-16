@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "../style/tips.css";
 
 class Tips extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (

@@ -16,6 +16,12 @@
   background: #333 !important;
 }
 
+@media (max-width: 768px) {
+  .ant-menu {
+    width: 750px;
+  }
+}
+
 @media (min-width: 768px) {
   .ant-menu {
     width: 750px;

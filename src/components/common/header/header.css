@@ -29,6 +29,12 @@
   animation: rotateInifite 3s infinite linear;
 }
 
+@media (max-width: 768px) {
+  .b-header-container {
+    width: 750px;
+  }
+}
+
 @media (min-width: 768px) {
   .b-header-container {
     width: 750px;
