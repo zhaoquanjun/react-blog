@@ -6,27 +6,9 @@ import { Icon } from 'antd';
 const masterAvator = require('../../../assets/avator.jpg')
 
 class Card extends Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            mouseState: ''
-        }
-        this.handleRotateIn = this.handleRotateIn.bind(this);
-        this.handleRotateOut = this.handleRotateOut.bind(this);
-    }
-
-    handleRotateIn(e){
-        this.setState(state => ({
-            mouseState: 'in'
-        }))
-        console.log(this.state.mouseState)
-    }
-
-    handleRotateOut(e){ 
-        this.setState(state => ({
-            mouseState: 'out'
-        }))
-    }
+    // constructor(props){
+    //     super(props);
+    // }
 
     render (){
         return(

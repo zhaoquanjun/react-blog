@@ -21,22 +21,15 @@
     width: 110px;
     height: 110px;
     border-radius: 50%;
+    transition: transform .8s ease-in-out;
+}
+
+.card-avator:hover{
+    transform: rotate(360deg);
 }
 
 .card-avator img{
     border-radius: 50%;
-}
-
-.card-avator img:hover{
-    transform: rotate(360deg)
-}
-
-.card-rotate-i{
-    animation: avatorRotate-i 1s;
-}
-
-.card-rotate-o{
-    animation: avatorRotate-o 1s;
 }
 
 .card-name{
