@@ -6,7 +6,8 @@ import { Row, Col, } from "antd";
 import Banner from "../components/private/banner/banner";
 import HomeArticle from "../components/private/homeArticle/home-article";
 import Card from '../components/private/card/card';
-import Follow from '../components/private/follow/follow'
+import Follow from '../components/private/follow/follow';
+import Tags from '../components/private/cloudTags/tags'
 
 
 class Home extends Component {
@@ -40,6 +41,7 @@ class Home extends Component {
           <Col className='content-right gutter-row' span={6}>
             <Card />
             <Follow />
+            <Tags />
           </Col>
         </Row>
         

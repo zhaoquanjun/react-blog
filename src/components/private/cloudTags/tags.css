@@ -1,0 +1,24 @@
+.b-tags{
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 0 8px #444;
+    
+}
+
+.b-tags-header{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #000;
+    height: 49px;
+    border-bottom: 1px solid #aaa;
+}
+
+.b-tags-content{
+    padding: 10px 15px;
+}
+
+.b-tags-item{
+    padding: 5px;
+    display: inline-block;
+}
