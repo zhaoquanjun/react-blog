@@ -29,8 +29,7 @@ class Home extends Component {
           <div className="home-day-words">
             <h2 className="words-title">每日寄语</h2>
             <p className="words-content">
-              毕竟不是作家，写不出那么好的文章 —
-              因为没有丰富阅历和经验！闲下来时多看看书，书本里的故事总有我要学的人生。
+              人生来悲欢离合，难逃生老病死之轮回；唯在世匆匆数十载，能无愧于他人，无愧于自己，便是值得的一生。
             </p>
           </div>
         </div>
