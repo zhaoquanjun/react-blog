@@ -4,6 +4,8 @@ import "./App.css";
 
 import Route from "./route";
 
+import { BackTop } from 'antd';
+
 import Header from "./components/common/header/header";
 import Footer from "./components/common/footer/footer";
 import Breadcrumb from "./components/private/breadcrumb/breadcrumb";
@@ -21,6 +23,9 @@ class App extends Component {
         </div>
         <div className="footerContainer">
           <Footer />
+        </div>
+        <div className='backTop'>
+          <BackTop />
         </div>
       </div>
     );
