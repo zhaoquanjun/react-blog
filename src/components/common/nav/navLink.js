@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Menu, Icon } from "antd";
-// import { Link } from "react-router-dom";
+// import { Link } from 'react-router-dom'
 import "./navLink.css";
 
 const MenuItem = Menu.Item;
@@ -16,28 +16,29 @@ const Lists = [
 
 const content = Lists.map(item => (
   <MenuItem key={item.key}>
-    {/* <Link to="/"> */}
-    <Icon type={item.type} />
-    {item.text}
-    {/* </Link> */}
+      <Icon type={item.type} />
+      {item.text} 
   </MenuItem>
 ));
 
 class NavTo extends Component {
   constructor(props, context) {
     super(props, context);
-    // this.context.router;
     this.state = {
       currentPath: "home"
     };
     this.handlePathChange = this.handlePathChange.bind(this);
+    this.handleSelected = this.handleSelected.bind(this);
   }
 
   handlePathChange(e) {
     this.setState({
       currentPath: e.key
     });
-    // this.context.router.push("/" + e.key);
+  }
+
+  handleSelected(e){
+    // console.log(this.props.history)
   }
 
   render() {
@@ -45,6 +46,7 @@ class NavTo extends Component {
       <div className="nav-menu">
         <Menu
           onClick={this.handlePathChange}
+          onSelect={this.handleSelected}
           mode="horizontal"
           selectedKeys={[this.state.currentPath]}
         >
@@ -55,8 +57,8 @@ class NavTo extends Component {
   }
 }
 
-// NavTo.propTypes = {
-//   router: PropTypes.func.isRequired
-// };
+NavTo.propTypes = {
+  router: PropTypes.object
+};
 
 export default NavTo;
