@@ -5,9 +5,9 @@ import { Row, Col, } from "antd";
 
 import Banner from "../components/private/banner/banner";
 import HomeArticle from "../components/private/homeArticle/home-article";
-import Card from '../components/private/card/card';
-import Follow from '../components/private/follow/follow';
-import Tags from '../components/private/cloudTags/tags'
+import Card from '../components/common/card/card';
+import Follow from '../components/common/follow/follow';
+import Tags from '../components/common/cloudTags/tags';
 
 
 class Home extends Component {
@@ -43,7 +43,6 @@ class Home extends Component {
             <Tags />
           </Col>
         </Row>
-        
       </div>
     );
   }

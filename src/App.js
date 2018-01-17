@@ -8,7 +8,7 @@ import { BackTop } from 'antd';
 
 import Header from "./components/common/header/header";
 import Footer from "./components/common/footer/footer";
-import Breadcrumb from "./components/private/breadcrumb/breadcrumb";
+import Breadcrumb from "./components/common/breadcrumb/breadcrumb";
 
 class App extends Component {
   render() {

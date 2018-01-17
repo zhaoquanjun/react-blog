@@ -12,6 +12,10 @@
   margin-right: auto;
 }
 
+.backTop{
+
+}
+
 @media (max-width: 768px) {
   .breadcrumbContainer,
   .contentContainer {

@@ -6,7 +6,7 @@ import {
   Redirect
 } from "react-router-dom";
 
-import { Home, Article, TimeLine, Tips, Essay } from "./views";
+import { Home, Article, TimeLine, Tips, Essay } from "./containers";
 
 const Routes = () => (
   <BrowserRouter>

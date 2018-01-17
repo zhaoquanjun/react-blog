@@ -2,7 +2,7 @@
     width: 100%;
     margin-top: 15px;
     box-shadow: 0 0 8px #444;
-    
+    animation: rotateAside 1s both;
 }
 
 .b-tags-header{
@@ -21,4 +21,15 @@
 .b-tags-item{
     padding: 5px;
     display: inline-block;
+}
+
+@keyframes rotateAside {
+    from {
+      opacity: 0;
+      transform: rotateY(180deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateY(0)
+    }
 }

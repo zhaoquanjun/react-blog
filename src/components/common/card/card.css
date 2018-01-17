@@ -3,6 +3,7 @@
     width: 100%;
     height: 330px;
     box-shadow: 0 0 8px #444;
+    animation: rotateAside 1s both;
 }
 
 .card-header{
@@ -52,24 +53,14 @@
     overflow: hidden;
 }
 
-
-
-@keyframes avatorRotate-o {
-    from{
-        transform: rotate(0)
+@keyframes rotateAside {
+    from {
+      opacity: 0;
+      transform: rotateY(-180deg);
     }
-    to{
-        transform: rotate(-360deg)
+    to {
+      opacity: 1;
+      transform: rotateY(0)
     }
-}
-
-
-@keyframes avatorRotate-i {
-    from{
-        transform: rotate(0deg)
-    }
-    to{
-        transform: rotate(360deg)
-    }
-}
+  }
 

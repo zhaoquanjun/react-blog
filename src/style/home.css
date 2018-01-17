@@ -13,6 +13,7 @@
   height: 100%;
   overflow: hidden;
   box-shadow: 0 0 8px #444;
+  animation: unfold 1s both;
 }
 
 .home-day-words {
@@ -26,6 +27,7 @@
   background-size: 100% 100%;
   box-shadow: 0 0 8px #444;
   text-align: center;
+  animation: unfold 1s both;
 }
 
 .words-title {
@@ -45,14 +47,30 @@
   font-size: 16px;
   font-weight: 500;
   text-align: left;
-  text-indent: 40px;
+  text-indent: 35px;
+  text-shadow: 0 0 20px green;
+  color: darkgreen;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .home-content{
   margin-top: 20px;
 }
 
+/* 每日一句动画 */
+@keyframes unfold {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to{
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
 
+
+/* 适配不同尺寸 */
 @media (max-width: 768px) {
   .home-banner {
     width: 730px;

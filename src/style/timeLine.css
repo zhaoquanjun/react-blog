@@ -1,0 +1,22 @@
+.timeLinePage{
+    width: 100%;
+}
+
+.timelineContent{
+    padding: 50px 20px 20px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 8px #444;
+}
+
+.timelineContent{
+    animation: fadeIn 2s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
