@@ -19,14 +19,19 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 In the project directory, you can run:
 
-### `npm start`
   ```
     yarn start
   ```
-
-
+  * or
+  ```
+    npm run start
+  ```
 ### `npm run build`
   ```
     yarn build
+  ```
+  * or
+  ```
+    npm run build
   ```
 
