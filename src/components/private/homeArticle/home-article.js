@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import './home-article.css'
 
+import { message } from 'antd';
+
 
 const contentLists = [
     {
@@ -31,6 +33,7 @@ class HomeArticle extends Component{
 
     handleReadOver(e){
         console.log(e)
+        message.info("I'm sorry for that will come soon ...")
     }
     
 
