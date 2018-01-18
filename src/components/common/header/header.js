@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./header.css";
-import logo from "../../../logo.svg";
+import logo from "../../../assets/logo.svg";
 
 import NavTo from "../nav/navLink";
 
