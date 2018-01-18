@@ -8,6 +8,7 @@ import HomeArticle from "../components/private/homeArticle/home-article";
 import Card from '../components/common/card/card';
 import Follow from '../components/common/follow/follow';
 import Tags from '../components/common/cloudTags/tags';
+import Calendar from '../components/common/calender/calender';
 
 
 class Home extends Component {
@@ -37,6 +38,7 @@ class Home extends Component {
           <Col className='content-right gutter-row' span={6}>
             <Card />
             <Follow />
+            <Calendar />
             <Tags />
           </Col>
         </Row>

@@ -6,6 +6,7 @@ import { Card, Row, Col, Timeline, Icon } from 'antd';
 import CardList from '../components/common/card/card';
 import Follow from '../components/common/follow/follow';
 import Tags from '../components/common/cloudTags/tags';
+import Calendar from '../components/common/calender/calender';
 
 const TimelineItme = Timeline.Item;
 
@@ -40,6 +41,7 @@ class Essay extends Component {
             <Col className='content-right gutter-row' span={6}>
               <CardList />
               <Follow />
+              <Calendar />
               <Tags />
             </Col>
           </Row>

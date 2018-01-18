@@ -4,13 +4,12 @@ import "./style/main.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
-import { BrowserRouter } from "react-router-dom";
+
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 
 
-const render = Component => (
-    ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById("root"))
-)
-
-render(App)
+ReactDOM.render(<App />, document.getElementById("root"))
 
 registerServiceWorker();

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import './follow.css';
 
-import { Icon } from 'antd'
 
 const followSource = [
-    {key: 'github', path: 'https://github.com/zhaoquanjun'},
-    {key: 'weibo-square', path: 'https://weibo.com/u/3516470941/home'}
+    {key: 'github', src: require('../../../assets/github.svg'), path: 'https://github.com/zhaoquanjun'},
+    {key: 'weibo', src: require('../../../assets/weibo.svg'), path: 'https://weibo.com/u/3516470941/home'},
+    {key: 'boke', src: require('../../../assets/boke.svg'), path: 'https://zhaoquanjun.github.io/'}
 ]
 
 const floowContent = followSource.map(item => (
     <a className='b-follow-item' key={item.key} href={item.path} target='_blank'>
-        <Icon type={item.key} />
+        <img src={item.src} alt={item.key}/>
     </a>
 ))
 

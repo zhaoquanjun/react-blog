@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Menu, Icon } from "antd";
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./navLink.css";
 
 const MenuItem = Menu.Item;
@@ -23,9 +23,9 @@ const content = Lists.map(item => (
 
 class NavTo extends Component {
   constructor(props, context) {
-    super(props, context);
+    super(...arguments);
     this.state = {
-      currentPath: "home"
+      currentPath: ""
     };
     this.handlePathChange = this.handlePathChange.bind(this);
     this.handleSelected = this.handleSelected.bind(this);
@@ -38,7 +38,8 @@ class NavTo extends Component {
   }
 
   handleSelected(e){
-    // console.log(this.props.history)
+    console.log(this.state.currentPath)
+
   }
 
   render() {

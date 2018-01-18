@@ -6,6 +6,7 @@ import { Row, Col } from 'antd';
 import Card from '../components/common/card/card';
 import Follow from '../components/common/follow/follow';
 import Tags from '../components/common/cloudTags/tags';
+import Calendar from '../components/common/calender/calender';
 
 const tipsLists = [
   {title: 'Javascript 中的 this', time: '2017-1-1', author: 'Carlton',  desc: 'Javascript 中的 this 是一个在工作中经常会遇到的点，而由此也给我们的工作带来了不少的困扰，今天就我所认识的 this 来做一个力所能及的探讨'},
@@ -54,6 +55,7 @@ class Tips extends Component {
             <Col className='content-right gutter-row' span={6}>
               <Card />
               <Follow />
+              <Calendar />
               <Tags />
             </Col>
           </Row>
