@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './tags.css'
 
-import {Tag} from 'antd';
+import { Tag, notification } from 'antd';
 
 const tagsLists = [
     {key: 'React', text: 'React', type: 'red'},
@@ -15,18 +15,38 @@ const tagsLists = [
     {key: '循环性能', text: '循环性能', type: '#108ee9'}
 ]
 
-const tagContent = tagsLists.map(item => (
-    <li className='b-tags-item' key={item.key}><Tag color={item.type}>{item.text}</Tag></li>
-))
+const openNotification = () => {
+    notification.open({
+        message: '陛下',
+        description: 'It has not completed yet now, please wait a while; I promise it will come soon ~'
+    })
+}
+
+// const tagContent = tagsLists.map(item => (
+//     <li onClick={this.handleDetail} className='b-tags-item' key={item.key}><Tag color={item.type}>{item.text}</Tag></li>
+// ))
+
 
 class Tags extends Component{
+    constructor(props){
+        super(props);
+        this.handleDetail = this.handleDetail.bind(this)
+    }
+
+    handleDetail(e){
+        openNotification();
+    }
 
     render(){
         return (
             <div className='b-tags'>
                 <div className='b-tags-header'>Cloud Tags</div>
                 <ul className='b-tags-content'>
-                    {tagContent}
+                    {tagsLists.map(item => (
+                    <li onClick={this.handleDetail} className='b-tags-item' key={item.key}>
+                    <Tag color={item.type}>{item.text}</Tag>
+                    </li>
+                    ))}
                 </ul>
             </div>
         )
