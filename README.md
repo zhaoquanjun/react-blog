@@ -22,16 +22,18 @@ In the project directory, you can run:
   ```
     yarn start
   ```
-  * or
+  or
   ```
     npm run start
   ```
-### `npm run build`
+  to start the project
+  
   ```
     yarn build
   ```
-  * or
+  or
   ```
     npm run build
   ```
+  to build the project
 
