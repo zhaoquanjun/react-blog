@@ -17,7 +17,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
  
 ## Available Scripts
 
-In the project directory, you can run:
+### to start the project
 
   ```
     yarn start
@@ -26,8 +26,8 @@ In the project directory, you can run:
   ```
     npm run start
   ```
-  to start the project
-  
+### to build the project
+
   ```
     yarn build
   ```
@@ -35,5 +35,5 @@ In the project directory, you can run:
   ```
     npm run build
   ```
-  to build the project
+
 
