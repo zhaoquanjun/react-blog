@@ -30,7 +30,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
         text
       }
     </pre>
-    - 'action 创建函数' 和 action 是区别开的，action 是一个普通对象，而 action 创建对象是生成 action 的方法
+    > 'action 创建函数' 和 action 是区别开的，action 是一个普通对象，而 action 创建对象是生成 action 的方法
     - 示例代码：
     <pre>
       actions.js
@@ -61,7 +61,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
       1.修改传入函数
       2.执行有副作用的操作，如 API 操作和路由跳转
       3.调用非纯函数，如 Date.now() Math.random()
-      
+
  
 ## Available Scripts
 
