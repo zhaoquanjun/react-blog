@@ -30,6 +30,28 @@ You can find the most recent version of this guide [here](https://github.com/fac
         text
       }
     </pre>
+    - 'action 创建函数' 和 action 是区别开的，action 是一个普通对象，而 action 创建对象是生成 action 的方法
+    - 示例代码：
+    <pre>
+      actions.js
+      /* action 类型 */
+      export const ADD_TODO = 'ADD_TODO';
+      export const TOGGLE_TODO = 'TOGGLE_TODO';
+      export const SET_VISIBLITY_FILTER = 'SET_VISIBILITY_FILTER'
+
+      /* 其他的常亮 */
+      export const VisiblityFilters = {
+        SHOW_ALL: 'SHOW_ALL',
+        SHOW_COMPLETED: 'SHOW_COMPLETED',
+        SHOW_ACTIVE: 'SHOW_ACTIVE'
+      }
+
+      /* action 创建函数 */
+      export function addTodo(text){
+        return{type:'ADD_TODO, text}
+      }
+      ...
+    </pre>
   - 使用纯函数来执行修改 （reducers）
     - 为了描述 action 如何改变 state tree，你需要编写 reducers，他就是纯粹的函数，接受先前的 action、state，然后返回新的
  
