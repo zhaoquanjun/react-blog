@@ -30,8 +30,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
       import { createStore } from 'redux'
       import { todoApp } from './reducers/reducer' // 引入主 reducers 
       let store = createStore(todoApp);  // 创建 store
-      > createStore 共有两个参数，第二个是可选的，用于设置 state 的初始状态
     </pre>
+    > createStore 共有两个参数，第二个是可选的，用于设置 state 的初始状态
 
 
   - state 是只读的 （action）
