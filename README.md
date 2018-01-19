@@ -61,7 +61,27 @@ You can find the most recent version of this guide [here](https://github.com/fac
       1.修改传入函数
       2.执行有副作用的操作，如 API 操作和路由跳转
       3.调用非纯函数，如 Date.now() Math.random()
+    - 首次执行时，state 为 undefined，此时可借机设置并且返回应用的初始 state
+    <pre>
+      import { VisiblityFilters } from 'action
+      const initialState = {
+        visiblityFilter: VisiblityFilters.SHOW_ALL,
+        todos: []
+      }
 
+      function todoApp (state = initialState, action){
+        switch(action.type){
+          case SET_VISIBLITY_FILTER:
+            return Object.assign({},state,{
+              visiblityFilter: action.filter
+            })
+          default: 
+            return state
+        }
+      }
+    </pre>
+    > 1、因为 reducer 是不会修改本身的 state ，他要做的是接受旧的，返回一个新的，因此 assign({},state,...) 是一定的；或者{...state,...newState}
+    > 2、default 情况下一定要返回旧的 state，遇到未知的action时，都要返回旧的 state
  
 ## Available Scripts
 
