@@ -54,6 +54,14 @@ You can find the most recent version of this guide [here](https://github.com/fac
     </pre>
   - 使用纯函数来执行修改 （reducers）
     - 为了描述 action 如何改变 state tree，你需要编写 reducers，他就是纯粹的函数，接受先前的 action、state，然后返回新的
+    <pre>
+      (previousState,action) => newState
+    </pre>
+    > 之所以称作 reducer 是因为要被传递给 Array.prototype.reduce(reducer,?initialValue)方法，保持 reducer 的纯净非常重要，，永远不要在他里面做一下的操作：
+      1.修改传入函数
+      2.执行有副作用的操作，如 API 操作和路由跳转
+      3.调用非纯函数，如 Date.now() Math.random()
+      
  
 ## Available Scripts
 
