@@ -80,7 +80,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
         }
       }
     </pre>
-    > 1、因为 reducer 是不会修改本身的 state ，他要做的是接受旧的，返回一个新的，因此 assign({},state,...) 是一定的；或者{...state,...newState}
+    > 1、因为 reducer 是不会修改本身的 state ，他要做的是接受旧的，返回一个新的，因此 assign({},state,...) 是一定的；或者{...state,...newState}</br>
     > 2、default 情况下一定要返回旧的 state，遇到未知的action时，都要返回旧的 state
  
 ## Available Scripts
