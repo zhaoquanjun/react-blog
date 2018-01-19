@@ -17,8 +17,23 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## redux
   ### 三大基本原则
-  - 单一数据源 （state）
+  - 单一数据源 （store）
     - 整个应用的 state 被储存再一个 object tree 中，并且他只能存在于唯一一个 store 中
+    - Store 的职责
+      > 1、维持应用的state；
+      > 2、提供 getState() 获取state；
+      > 3、提供 dispatch(action) 更新 state；
+      > 4、通过subscribe(listener) 注册监听器；
+      > 5、通过subscribt(listener) 返回的函数注销监听器
+    - 创建 store
+    <pre>
+      import { createStore } from 'redux'
+      import { todoApp } from './reducers/reducer' // 引入主 reducers 
+      let store = createStore(todoApp);  // 创建 store
+      > createStore 共有两个参数，第二个是可选的，用于设置 state 的初始状态
+    </pre>
+
+
   - state 是只读的 （action）
     - 唯一改变 state 的方法就是触发 action ，action 是一个用于描述已发生事件的<code>普通对象</code>，他可以被打印、序列化、储存，后期调试回放等...
     - action 是把数据从应用传到 store 的有效荷载，是 store 数据的唯一来源，一般通过 store.dispatch() 将 action 传到 store
@@ -52,6 +67,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
       }
       ...
     </pre>
+
+
   - 使用纯函数来执行修改 （reducers）
     - 为了描述 action 如何改变 state tree，你需要编写 reducers，他就是纯粹的函数，接受先前的 action、state，然后返回新的
     <pre>
