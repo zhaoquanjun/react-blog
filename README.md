@@ -25,6 +25,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
       > 3、提供 dispatch(action) 更新 state；
       > 4、通过subscribe(listener) 注册监听器；
       > 5、通过subscribt(listener) 返回的函数注销监听器
+
     - 创建 store
     <pre>
       import { createStore } from 'redux'
@@ -33,10 +34,14 @@ You can find the most recent version of this guide [here](https://github.com/fac
     </pre>
     > createStore 共有两个参数，第二个是可选的，用于设置 state 的初始状态
 
+    -
+
 
   - state 是只读的 （action）
     - 唯一改变 state 的方法就是触发 action ，action 是一个用于描述已发生事件的<code>普通对象</code>，他可以被打印、序列化、储存，后期调试回放等...
+
     - action 是把数据从应用传到 store 的有效荷载，是 store 数据的唯一来源，一般通过 store.dispatch() 将 action 传到 store
+
     - 约定 action 中必须使用一个字符串类型的 type 来表示要执行的动作：
     <pre>
       const ADD_TODO = 'ADD_TODO';
@@ -46,6 +51,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
       }
     </pre>
     > 'action 创建函数' 和 action 是区别开的，action 是一个普通对象，而 action 创建对象是生成 action 的方法
+
     - 示例代码：
     <pre>
       actions.js
@@ -78,6 +84,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
       1.修改传入函数
       2.执行有副作用的操作，如 API 操作和路由跳转
       3.调用非纯函数，如 Date.now() Math.random()
+
     - 首次执行时，state 为 undefined，此时可借机设置并且返回应用的初始 state
     <pre>
       import { VisiblityFilters } from 'action
@@ -100,6 +107,40 @@ You can find the most recent version of this guide [here](https://github.com/fac
     > 1、因为 reducer 是不会修改本身的 state ，他要做的是接受旧的，返回一个新的，因此 assign({},state,...) 是一定的；或者{...state,...newState}</br>
     > 2、default 情况下一定要返回旧的 state，遇到未知的action时，都要返回旧的 state
  
+## react-redux
+  - react 和 redux 绑定库包含了‘容器组件’和‘展示组件’相分离的开发思想
+  > 明智的做法是只在最顶层（如路由操作）里面使用 Redux；其余内部组件仅仅是展示型的，所有数据都通过 props 传入
+
+
+## fetch
+  - 1、fetch 是全局 window 的一个方法；
+    <pre>
+      fetch(url,options).then(res => {/*handle res*/}).catch(err => {/*handle err*/})
+    </pre>
+    > url 是必须的，options 是可选的  -->  类似于 Battery API， fetch API 也使用了 Javascript Promise处理结果/回调
+  
+  - 2、fetch 支持自定义请求头，增大了请求的灵活性
+    <pre>
+      var headers = new Headers(); //创建一个请求头
+      handers.append('Content-Type', 'application/json') //添加请求头信息
+      handers.get('Content-Type') //application/json -> 获取请求头具体某项信息
+      handers.set('Content-Type','text/plain')  // 修改请求头信息
+      handers.delete('Content-Type')  // 删除请求头信息
+      ---------------
+      // 创建对象时初始化
+      var headers = new Headers({
+        'Content-Type': 'application/json',
+        'X-My-Custom-Header': 'CustomValue'
+      });
+      ---------------
+      var request = new Request(url,{
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+      })
+      fetch(request).then((res) => {handle res});
+    </pre>
+
 ## Available Scripts
 
 ### to start the project

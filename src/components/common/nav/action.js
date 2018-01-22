@@ -1,0 +1,1 @@
+export const SET_PATH_SKIP = 'SET_PATH_SKIP';

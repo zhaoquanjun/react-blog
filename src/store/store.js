@@ -5,3 +5,6 @@ import responseApp from '../reducers/reducers'
 
 
 let store = createStore(responseApp);
+
+
+export default store;
