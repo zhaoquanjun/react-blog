@@ -12,6 +12,14 @@
   border-bottom: none;
 }
 
+.ant-menu-item a {
+  color: #fff !important;
+}
+
+.ant-menu-item a:hover {
+  color: #1890ff !important;
+}
+
 .menu-item:hover {
   background: #333 !important;
 }

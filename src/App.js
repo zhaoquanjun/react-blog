@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import "./App.css";
 // import ReactChildrenMap from './utils/ReachChildrenMap'
 
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+
 import PropTypes from 'prop-types';
 
 import RouteLink from "./route";
@@ -22,21 +26,23 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="b-page">
-        <Header />
-        <div className="breadcrumbContainer">
-          <Breadcrumb />
+      <Router>
+        <div className="b-page">
+          <Header />
+          <div className="breadcrumbContainer">
+            <Breadcrumb />
+          </div>
+          <div className='contentContainer'>
+            <RouteLink />
+          </div>
+          <div className="footerContainer">
+            <Footer />
+          </div>
+          <div className='backTop'>
+            <BackTop />
+          </div>
         </div>
-        <div className='contentContainer'>
-          <RouteLink />
-        </div>
-        <div className="footerContainer">
-          <Footer />
-        </div>
-        <div className='backTop'>
-          <BackTop />
-        </div>
-      </div>
+    </Router>
     );
   }
 }
