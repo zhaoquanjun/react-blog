@@ -58,6 +58,7 @@ class NavTo extends Component {
       </div>
     );
   }
+ 
 }
 
 NavTo.propTypes = {

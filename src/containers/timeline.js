@@ -11,19 +11,20 @@ import Calendar from '../components/common/calender/calender';
 const TimelineItme = Timeline.Item;
 
 const eventLists = [
-  {text: 'Creating 项目', time: '2017-1-12', key: 'create', color: 'green'},
-  {text: 'Finish 基本结构', time: '2017-1-13', key: 'finished the basic constructor', color: 'green'},
-  {text: 'Finish the route', time: '2017-1-15', key: 'finish the route', color: 'green', },
-  {text: '逐步完善 页面布局', time: '2017-1-17', key: 'optimize the page', color: 'red', type: 'clock-circle-o'},
-  {text: 'Completed 公共头、尾部分布局', time: '2017-1-17', key: 'finish the common header and footer', color: 'blue', type: ''},
-  {text: 'Finish 首页Banner、每日一句部分', time: '2017-1-18', key: 'finish the banner and words for day', color: 'blue', type: ''},
-  {text: 'Complete 公共侧边栏部分', time: '2017-1-18', key: 'finish the slider', color: 'green', type: ''},
-  {text: 'Finish 文章页面', time: '2017-1-19', key: 'finish the article', color: 'green', type: ''},
+  {text: 'Creating 项目', time: '2018-1-12', key: 'create', color: 'green'},
+  {text: 'Finish 基本结构', time: '2018-1-13', key: 'finished the basic constructor', color: 'green'},
+  {text: 'Finish the route', time: '2018-1-15', key: 'finish the route', color: 'green', },
+  {text: '逐步完善 页面布局', time: '2018-1-17', key: 'optimize the page', color: 'red', type: 'clock-circle-o'},
+  {text: 'Completed 公共头、尾部分布局', time: '2018-1-17', key: 'finish the common header and footer', color: 'blue', type: ''},
+  {text: 'Finish 首页Banner、每日一句部分', time: '2018-1-18', key: 'finish the banner and words for day', color: 'blue', type: ''},
+  {text: 'Complete 公共侧边栏部分', time: '2018-1-18', key: 'finish the slider', color: 'green', type: ''},
+  {text: 'Finish 文章页面', time: '2018-1-19', key: 'finish the article', color: 'green', type: ''},
   {text: 'Completing 时间轴页面', time: '2017-1-19', key: 'finish the timeline', color: 'red', type: ''},
-  {text: 'Finish 点滴汇', time: '2017-1-20', key: 'finish the tips', color: 'green', type: ''},
+  {text: 'Finish 点滴汇', time: '2018-1-20', key: 'finish the tips', color: 'green', type: ''},
   {text: 'Completing 随笔', time: '2017-1-21', key: 'finish the essay', color: 'red', type: ''},
-  {text: 'Add 回到顶部', time: '2017-1-22', key: 'add the backtop', color: 'blue', type: ''},
-  {text: 'completed 页面动画（animation）', time: '2017-1-23', key: 'complete the animation of page', color: 'blue', type: ''},
+  {text: 'Add 回到顶部', time: '2018-1-22', key: 'add the backtop', color: 'blue', type: ''},
+  {text: 'completed 页面动画（animation）', time: '2018-1-23', key: 'complete the animation of page', color: 'blue', type: ''},
+  {text: 'Amend 路由（Route）', time: '2018-1-26', key: 'amend the route', color: 'green', type: ''}
 ]
 
 const eventContent = eventLists.reverse().map(item => (
