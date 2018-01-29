@@ -26,33 +26,31 @@ const contentLists = [
   ]
 
 class HomeArticle extends Component{
-    constructor(props){
-        super(props)
-        this.handleReadOver = this.handleReadOver.bind(this);
-    }
+  constructor(props){
+      super(props)
+      this.handleReadOver = this.handleReadOver.bind(this);
+  }
 
-    handleReadOver(e){
-        console.log(e)
-        message.info("I'm sorry for that will come soon ...")
-    }
-    
+  handleReadOver(e){
+    message.info("I'm sorry for that will come soon ...")
+  }
+  
 
-    render(){
+  render(){
+    const artContent = contentLists.map(item => (
+      <li className="listItem" key={item.title}>
+        <h3 className='listItem-title'  onClick={this.handleReadOver}>{item.title}</h3>
+        <small className='listItem-subTitle'>{item.sub} </small>
+        <p className='listItem-content'>{item.text}</p>
+        <span className='readOver' onClick={this.handleReadOver}>阅读全文 >></span>
+      </li>
+    ))
 
-        const artContent = contentLists.map(item => (
-            <li className="listItem" key={item.title}>
-              <h3 className='listItem-title'  onClick={this.handleReadOver}>{item.title}</h3>
-              <small className='listItem-subTitle'>{item.sub} </small>
-              <p className='listItem-content'>{item.text}</p>
-              <span className='readOver' onClick={this.handleReadOver}>阅读全文 >></span>
-            </li>
-        ))
-
-        return (
-            <div>
-                {artContent}   
-            </div>
-        )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-    }
+    return (
+      <div>
+          {artContent}   
+      </div>
+    )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  }
 }
 export default HomeArticle
