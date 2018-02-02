@@ -7,7 +7,51 @@ import {
 import { Home, Article, TimeLine, Tips, Essay, Page404 } from "./containers";
 import ArticleDetail from './components/common/articleDetail/articleDetial'
 
-// const reg = /(\/|\/home|\/timeline|\/tips|\/essay|\/article)/;
+// const articlePage = (location, cb) => {
+//   require.ensure([], require => {
+//     cb(null, require('./containers/article').default)
+//   }, 'articlePage')
+// }
+
+// const articlePage = (props) => (
+//   <App load={(cb) => {
+//       require.ensure([], require => {
+//           cb(require('./containers/article'));
+//       });
+//   }}>
+//   {(articlePage) => <articlePage {...props}/>}
+// </App>
+// );
+
+// const timelinePage = (location, cb) => {
+//   require.ensure([], require => {
+//     cb(null, require('./containers/timeline').default)
+//   }, timelinePage)
+// }
+
+// const tipsPage = (location, cb) => {
+//   require.ensure([], require => {
+//     cb(null, require('./containers/tips').default)
+//   }, tipsPage)
+// }
+
+// const essayPage = (location, cb) => {
+//   require.ensure([], require => {
+//     cb(null, require('./containers/essay').default)
+//   }, essayPage)
+// }
+
+// const errorPage404 = (location, cb) => {
+//   require.ensure([], require => {
+//     cb(null, require('./containers/404').default)
+//   }, errorPage404)
+// }
+
+// const articleDetailPage = (location, cb) => {
+//   require.ensure([], require => {
+//     cb(null, require('./components/common/articleDetail/articleDetial').default)
+//   }, articleDetailPage)
+// }
 
 const RouteLink = () => (
   <Switch>
