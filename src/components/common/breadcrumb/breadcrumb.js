@@ -20,7 +20,7 @@ function mathchPath() {
   }
 }
 
-const currentPath = mathchPath()
+let currentPath = mathchPath()
 
 class Bread extends Component {
   constructor(props) {
@@ -32,10 +32,14 @@ class Bread extends Component {
     return (
       <div className="nav-path">
         <Breadcrumb className="b-breadcrumb">
-          <BreadItem>当前位置：/ 首页</BreadItem>
+          <BreadItem>当前位置：/ {currentPath}</BreadItem>
         </Breadcrumb>
       </div>
     );
+  }
+
+  componentWillUpdate() {
+    currentPath = mathchPath()
   }
 }
 
