@@ -5,6 +5,8 @@ import { Breadcrumb } from "antd";
 
 const BreadItem = Breadcrumb.Item;
 
+const currArticle = window.location.pathname.substr(window.location.pathname.lastIndexOf('/'));
+
 function mathchPath() {
   switch(window.location.pathname){
     case '/article':

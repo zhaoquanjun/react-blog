@@ -1,64 +1,60 @@
 import React, {Component} from 'react'
 import './style.css'
 
+import API from '../../../api/api'
+
 import { Anchor, Row, Col } from 'antd'
 
 const { Link } = Anchor
 
-// window.fetch = fetch
+const reg = /^\<code/;
 
 const contentList = {
-  title: 'Vue',
-  smallSub: '一段关于Vue的自述',
+  title: 'Yarn 简述',
+  smallSub: '一段关于 Yarn 的自述',
   content: [
     {
-      subs: {words: '这是第一段的小标题', href: 'fir_parh'},
+      subs: {words: 'Yarn 简介', href: 'fir_parh'},
       parh: [
-        '生活就如同时间一样，对每一个人都是一样的。但是却因为人与人思想、思维、心态等不同便出现了不同的生活局面，有的人过得贫苦心酸，有的人过得衣食无忧，有的人过得锦衣玉食。',
-        '面对如此落差的生活，自然就会心生埋怨或牢骚满腹。但是，我们可有进行过深层次的分析和思考，为什么别人可以过得很好而你却过不好？很多时候，我们就是太在意自己家境或父母为我们积累的财富或给予我们的物质基础太过于薄弱，把借口和理由全部推到了父母的身上，如果只是这样那还不为过，要是把自己不努力才导致自己生活不如别人或者当成是父母的罪过，那么这样就太不应该了。'
+        '是一款新的包管理器，将取代原有的基于npm客户端的工作流，但同时又保留了npm仓库的兼容性；',
+        '它具备原油工作流的所有功能，但相比之下更加快速，安全，可靠。'
       ]
     },
     {
-      subs: {words: '这是第二个小标题', href: 'sec_parh'},
+      subs: {words: '相比于 npm ，Yarn 性能优点', href: 'sec_parh'},
       parh: [
-        '父母能给予我们的其实只有生命，这已经是大自然对我们最大的恩赐，我们绝对不能不感恩反而忘恩负义或者恩将仇报等，那是我们最大的罪过。我们其实更应该知道自己的处境和与别人的不同，而找到自己奋斗的方向和目标，并不断地去努力和改变。如果只是一味地进行抱怨或发牢骚，那样可能一辈子也就这样了。'
+        '1、离线模式 --> yarn 会有一个缓冲目录，凡是安装过的包都会缓存下来，再次使用就不用从网上下载了，而是使用本地的即可，大大提高了开发效率，避免网络问题的丢包以及无网络情况下是开发；',
+        '2、依赖关系确定性 --> 确保在每一台机器上依赖关系顺序和版本是一致的，避免了npm没有指定版本号时版本不一致导致失败的问题；',
+        '3、网络性能优化 --> 下载时候优化请求顺序，避免请求瀑布发生；',
+        '4、网络回弹 --> 在某个安装包失败的时候不会像npm直接失败，而是尝试重新请求；',
+        '5、多注册来源 --> 所有依赖包，不管被不同的库间接引用多少次，都只会从一个注册源去安装，防止出现混乱不一致；',
+        '6、扁平模式 --> 对于多个包依赖于同一个子包的情况，yarn会尽量提取为一个包，防止出现多个副本，浪费空间内存；'
       ]
     },
     {
-      subs: '',
+      subs: {words: 'Yarn 的使用', href: 'thr_parh'},
       parh: [
-        '在我们的身边出生卑微、家境贫寒、遭遇不好的人比比皆是，但是他们却可以活的潇洒自由、幸福美满，而你怎么不能呢？这就是我们该思考的，应该清楚：“抱怨没有用，一切靠自己”。因为在这个世界上我们唯一能依靠的只有自己，为什么？因为你靠别人，别人不可能永远帮助或者侍奉你，有一天他们会离开你；因为你靠父母，父母不可能永远把你当孩子或不让你长大，有一天他们也会离开你；因为你靠亲戚朋友，亲戚朋友不会时时刻刻都能帮助你，有一天他们也会爱莫能助',
-        '抱怨，其实对我们是最大的阻碍，如果我们就因为遇到一点点的不如意或不顺心就开始心灰意冷、者垂头丧气、一蹶不振，整个人急如此颓废下去，那么谁也拯救不了你，谁也改变不了你，最终真的就会谁都看不起你。我们应该时刻保持着一种阳光心态，自信生活，因为生活本来就不会那么美好，那么我们就更没有理由不去把它过好。这种心态其实才是难能可贵的，但是我们很多的人就是做不到，或许他们总会觉得这样就是做作，就是矫情，就是在勉强自己。但是，我们可以仔细地去观察一下我们身边的人，那些整天只会抱怨的有几个成功了？没有。反而那些遇到困难主动寻求解决办法的基本都小有成就，这就是区别，这就是你一直想不明白的。所以，你的生活不如别人那就是因为你吃不了别人能吃的苦，你不想去付出别人付出的那么多，你不去面对或者害怕面对那些困难与挫折。'
+        '1、创建一个项目',
+        '<code yarn init ---> 初始化一个项目，生成一个package.json  （同 npm init）',
+        '2、添加、更新、删除一个依赖包文件',
+        '<code 1.添加   -->  yarn add [package]@[version]',
+        '<code 2.更新   -->  yarn update [package]@[version]',
+        '<code 3.删除   -->  yarn remove [package]'
       ]
     },
     {
-      subs: {words: '这是第三个小标题', href: 'thr_parh'},
+      subs:{words: 'tips', href: 'for_parh'},
       parh: [
-        '在我们的身边出生卑微、家境贫寒、遭遇不好的人比比皆是，但是他们却可以活的潇洒自由、幸福美满，而你怎么不能呢？这就是我们该思考的，应该清楚：“抱怨没有用，一切靠自己”。因为在这个世界上我们唯一能依靠的只有自己，为什么？因为你靠别人，别人不可能永远帮助或者侍奉你，有一天他们会离开你；因为你靠父母，父母不可能永远把你当孩子或不让你长大，有一天他们也会离开你；因为你靠亲戚朋友，亲戚朋友不会时时刻刻都能帮助你，有一天他们也会爱莫能助',
-        '抱怨，其实对我们是最大的阻碍，如果我们就因为遇到一点点的不如意或不顺心就开始心灰意冷、者垂头丧气、一蹶不振，整个人急如此颓废下去，那么谁也拯救不了你，谁也改变不了你，最终真的就会谁都看不起你。我们应该时刻保持着一种阳光心态，自信生活，因为生活本来就不会那么美好，那么我们就更没有理由不去把它过好。这种心态其实才是难能可贵的，但是我们很多的人就是做不到，或许他们总会觉得这样就是做作，就是矫情，就是在勉强自己。但是，我们可以仔细地去观察一下我们身边的人，那些整天只会抱怨的有几个成功了？没有。反而那些遇到困难主动寻求解决办法的基本都小有成就，这就是区别，这就是你一直想不明白的。所以，你的生活不如别人那就是因为你吃不了别人能吃的苦，你不想去付出别人付出的那么多，你不去面对或者害怕面对那些困难与挫折。'
-      ]
-    },
-    {
-      subs: {words: '这是第四个小标题', href: 'for_parh'},
-      parh: [
-        '在我们的身边出生卑微、家境贫寒、遭遇不好的人比比皆是，但是他们却可以活的潇洒自由、幸福美满，而你怎么不能呢？这就是我们该思考的，应该清楚：“抱怨没有用，一切靠自己”。因为在这个世界上我们唯一能依靠的只有自己，为什么？因为你靠别人，别人不可能永远帮助或者侍奉你，有一天他们会离开你；因为你靠父母，父母不可能永远把你当孩子或不让你长大，有一天他们也会离开你；因为你靠亲戚朋友，亲戚朋友不会时时刻刻都能帮助你，有一天他们也会爱莫能助',
-        '抱怨，其实对我们是最大的阻碍，如果我们就因为遇到一点点的不如意或不顺心就开始心灰意冷、者垂头丧气、一蹶不振，整个人急如此颓废下去，那么谁也拯救不了你，谁也改变不了你，最终真的就会谁都看不起你。我们应该时刻保持着一种阳光心态，自信生活，因为生活本来就不会那么美好，那么我们就更没有理由不去把它过好。这种心态其实才是难能可贵的，但是我们很多的人就是做不到，或许他们总会觉得这样就是做作，就是矫情，就是在勉强自己。但是，我们可以仔细地去观察一下我们身边的人，那些整天只会抱怨的有几个成功了？没有。反而那些遇到困难主动寻求解决办法的基本都小有成就，这就是区别，这就是你一直想不明白的。所以，你的生活不如别人那就是因为你吃不了别人能吃的苦，你不想去付出别人付出的那么多，你不去面对或者害怕面对那些困难与挫折。'
-      ]
-    },
-    {
-      subs: {words: '这是第五个小标题', href: 'fif_parh'},
-      parh: [
-        '在我们的身边出生卑微、家境贫寒、遭遇不好的人比比皆是，但是他们却可以活的潇洒自由、幸福美满，而你怎么不能呢？这就是我们该思考的，应该清楚：“抱怨没有用，一切靠自己”。因为在这个世界上我们唯一能依靠的只有自己，为什么？因为你靠别人，别人不可能永远帮助或者侍奉你，有一天他们会离开你；因为你靠父母，父母不可能永远把你当孩子或不让你长大，有一天他们也会离开你；因为你靠亲戚朋友，亲戚朋友不会时时刻刻都能帮助你，有一天他们也会爱莫能助',
-        '抱怨，其实对我们是最大的阻碍，如果我们就因为遇到一点点的不如意或不顺心就开始心灰意冷、者垂头丧气、一蹶不振，整个人急如此颓废下去，那么谁也拯救不了你，谁也改变不了你，最终真的就会谁都看不起你。我们应该时刻保持着一种阳光心态，自信生活，因为生活本来就不会那么美好，那么我们就更没有理由不去把它过好。这种心态其实才是难能可贵的，但是我们很多的人就是做不到，或许他们总会觉得这样就是做作，就是矫情，就是在勉强自己。但是，我们可以仔细地去观察一下我们身边的人，那些整天只会抱怨的有几个成功了？没有。反而那些遇到困难主动寻求解决办法的基本都小有成就，这就是区别，这就是你一直想不明白的。所以，你的生活不如别人那就是因为你吃不了别人能吃的苦，你不想去付出别人付出的那么多，你不去面对或者害怕面对那些困难与挫折。'
+        'yarn add 默认的是安装到 dependencies 中，和 yarn add [package] --save 是一样的功能。'
       ]
     }
   ],
   anchor: [
-    {name: '第一段', target: '#fir_parh'},
-    {name: '第二段', target: '#sec_parh'},
-    {name: '第三段', target: '#thr_parh'},
-    {name: '第四段', target: '#for_parh'},
-    {name: '第五段', target: '#fif_parh'},
+    {name: '简述', target: '#fir_parh'},
+    {name: '性能优劣', target: '#sec_parh'},
+    {name: 'Yarn 的使用', target: '#thr_parh'},
+    {name: 'tips', target: '#for_parh'},
+    // {name: '第五段', target: '#fif_parh'},
     // {name: '44444', target: ''},
     // {name: '55555', target: ''},
     // {
@@ -70,20 +66,18 @@ const contentList = {
   ]
 }
 
+
+var a;
+// 全文内容
 const content = contentList.content.map((item, index) => ((
   <div key={index}>
-    {leftSlideHasSecTitle(item)}
-    <p className="detail-content">{item.parh}</p>
+    {articleSubTitle(item)}
+    {parhContent(item.parh, index)}
   </div>
 )))
 
-const anchorContent = contentList.anchor.map(item => (
-  <Link href={item.target} title={item.name} key={item.name}>
-    {rightSlideHasChildren(item)}
-  </Link>
-))
-
-function leftSlideHasSecTitle(it){
+// 小标题
+function articleSubTitle(it){
   if(it.subs){
     return <h3 id={it.subs.href} className="subs-title"><span>{it.subs.words}</span><a className="anchor" href={'#' + it.subs.href} >   #</a></h3>
   } else {
@@ -91,7 +85,28 @@ function leftSlideHasSecTitle(it){
   }
 }
 
-function rightSlideHasChildren(par){
+// 段落内容
+function parhContent(con, firIndex) {
+  return con.map((item, index) => {
+    if(reg.test(item)){
+      return <pre key={firIndex-index} className='detail-comment'>{item.substr(5)}</pre>
+    } else {
+      return <p key={firIndex-index} className="detail-content">{item}</p>
+    }
+  })
+}
+
+
+// -------------------------------------------------------
+// 锚点定位
+const anchorContent = contentList.anchor.map(item => (
+  <Link href={item.target} title={item.name} key={item.name}>
+    {anchorPos(item)}
+  </Link>
+))
+
+// 锚点内容
+function anchorPos(par){
   if(par.children){
     return par.children.map(it => (<Link href={it.target} title={it.name} key={it.name} />))
   }
@@ -108,8 +123,8 @@ class ArticleDetail extends Component{
         <Row gutter={16} className='home-content'>
           <Col className="content-left gutter-row" span={18}>
             <div className="detail-container">
-              <h2 className="detail-title">Vue 的自述</h2>
-              <small className="detail-sub">一段关于 VUE 的个人感悟描述</small>
+              <h2 className="detail-title">{contentList.title}</h2>
+              <small className="detail-sub">{contentList.smallSub}</small>
               {content}
             </div>
           </Col>
@@ -122,17 +137,9 @@ class ArticleDetail extends Component{
   }
 
   componentDidMount() {
-    fetch('../../../data/article/articleDetail.json',{
-      headers: new Headers({
-      'Accept': 'application/json' // 通过头指定，获取的数据类型是JSON
-      })
-    })
-    .then(res => {
-      console.log(res)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+    // API.getArticle().then(res => {
+    //   console.log(res)
+    // })
   }
 
 }

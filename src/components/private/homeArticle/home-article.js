@@ -6,7 +6,7 @@ import { message } from 'antd';
 
 const contentLists = [
     {
-      title: 'Javascript 的秘密', path: '/', sub: 'post @ 2018-1-16 category: Javascript', text: 'Javascript 是一种轻量级的脚本语言，相比于后端语言更加的凸显自由、简介的编程方法。以 V8 引擎做底层，在 Chrome 这种 webkit 内核的浏览器上更如神助，速度简直不可同日而语；他的出现促使互联网向前迈进了一大步，实现了前后端的分离，前度业务逻辑的自我完善、飞跃。'
+      title: 'Yarn', path: '/', sub: 'post @ 2018-1-16 category: 包管理工具', text: 'yarn 是 facebook 公布的新的 javascript 的包管理工具，用来替代 nodeJS 自带的 npm ；与 NPM 相比较，Yarn 解决了很多现在 NPM 所面临的问题。'
     },
     {
       title: '探索 Vue', path: '/', sub: 'post @ 2018-1-16 category: Javascript', text: 'Javascript 是一种轻量级的脚本语言，相比于后端语言更加的凸显自由、简介的编程方法。以 V8 引擎做底层，在 Chrome 这种 webkit 内核的浏览器上更如神助，速度简直不可同日而语；他的出现促使互联网向前迈进了一大步，实现了前后端的分离，前度业务逻辑的自我完善、飞跃。'
@@ -31,8 +31,9 @@ class HomeArticle extends Component{
       this.handleReadOver = this.handleReadOver.bind(this);
   }
 
-  handleReadOver(e){
+  handleReadOver(e) {
     message.info("I'm sorry for that will come soon ...")
+    console.log(e.target.innerHTML)
   }
   
 

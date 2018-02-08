@@ -24,7 +24,8 @@ const eventLists = [
   {text: 'Completing 随笔', time: '2017-1-21', key: 'finish the essay', color: 'red', type: ''},
   {text: 'Add 回到顶部', time: '2018-1-22', key: 'add the backtop', color: 'blue', type: ''},
   {text: 'completed 页面动画（animation）', time: '2018-1-23', key: 'complete the animation of page', color: 'blue', type: ''},
-  {text: 'Amend 路由（Route）', time: '2018-1-26', key: 'amend the route', color: 'green', type: ''}
+  {text: 'Amend 路由（Route）', time: '2018-1-26', key: 'amend the route', color: 'green', type: ''},
+  {text: 'update article', time: '2018-2-8', key: 'update article', color: 'green', type: ''}
 ]
 
 const eventContent = eventLists.reverse().map(item => (
